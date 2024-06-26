@@ -1,0 +1,13 @@
+version: '3.1'
+ 
+services:
+  mediawiki:
+    image: mediawiki
+    ports:
+      - "8085:80"
+    volumes:
+      - mediawiki_data:/var/www/html
+    restart: always
+ 
+volumes:
+  mediawiki_data:
